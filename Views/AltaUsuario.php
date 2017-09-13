@@ -20,14 +20,14 @@
             <div class="card">
                 <div class="card-image ">
                     <img src="../Resources/img/background.png">
-                    <span class="card-title">Alta de usuarios</span>
+                    <span class="card-title">Alta de usuario</span>
                     <span class="card-title"><img class="col s5" style="margin-left:-25px; margin-bottom: 50px;" src="../Resources/img/MSA.png"></span>
-                </div>
-                <div class="card-content">
-                      <form id="form-crear" method="post" action="php/altausuario" class="col s12" enctype="multipart/form-data">
+                    </div>
+                            <div class="card-content">
+                      <form id="form-crear" method="post" action="../php/altausuario.php" class="col s12" enctype="multipart/form-data">
                           <div class="row">
                               <div class="input-field col s12">
-                                  <input id="nombre" name="nombre" type="text" class="validate">
+                                  <input id="nombre" name="nombre"  type="text" class="validate">
                                   <label for="nombre">Nombre</label>
                               </div>
                               <div class="input-field col s12">
@@ -35,11 +35,11 @@
                                   <label for="correo">Correo</label>
                               </div>
                               <div class="input-field col s12">
-                                  <input id="password" name="password" type="text" class="validate">
+                                  <input id="password" name="password" type="password" class="validate">
                                   <label for="password">Contraseña</label>
                               </div>
                               <div class="input-field col s12">
-                                  <input id="password2" name="password2" type="text" class="validate">
+                                  <input id="password2" name="password2" type="password" class="validate">
                                   <label for="password2">Repetir contraseña</label>
                               </div>
                               <div class="input-field col s12 ">
@@ -49,7 +49,7 @@
                                           <option value="2">Usuario</option>
                                   </select>
                               </div>
-                                  <input class="input-field btn right" style="background: #BF3364;" type="submit" value="Registrar">
+                                  <input class="input-field btn right" id="btnAlta" style="background: #BF3364;" type="submit" value="Registrar">
                           </div>
                       </form>
                     <p> &nbsp</p>

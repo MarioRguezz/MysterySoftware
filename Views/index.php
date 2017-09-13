@@ -19,26 +19,28 @@
                     <img src="../Resources/img/background.png">
                     <span class="card-title">Inicio de sesión</span>
                     <span class="card-title"><img class="col s5" style="margin-left:-25px; margin-bottom: 50px;" src="../Resources/img/MSA.png"></span>
-                  <!--  @if(isset($errors))
-                        @foreach($errors as $error)
-                            <div class="col s12 red" style="height:30px; padding-top:5px;">
-                                <span class="white-text">
-                                    {{$error}}
-                                </span>
-                            </div>
-                        @endforeach
-                    @endif-->
+                            <?php
+                            if(isset($_GET["error"])){
+                                    $error = "";
+                                    if($_GET["error"] == "undefine"){
+                                      $error = "El usuario no ha sido encontrado en la BD";
+                                    }else{
+                                      $error = "Usuario no permitido";
+                                    }
+                                    echo   '<div class="col s12 red" style="height:30px; padding-top:5px;">
+                                    <span class="white-text">'.$error.'</span></div>';
+                            }
+                             ?>
                 </div>
-
                 <div class="card-content">
                     <form id="form-crear" method="post" action="Home.php"  enctype="multipart/form-data">
                         <div class="input-field col s12 ">
                             <label for="correo">Correo</label>
-                            <input type="email" class="validate" name="email" id="email"/><br>
+                            <input type="email" class="validate" required name="email" id="email"/><br>
                         </div>
                         <div class="input-field col s12">
                             <label for="password" class="validate">Contraseña</label>
-                            <input type="password" name="password" id="password"/><br>
+                            <input type="password" required name="password" id="password"/><br>
                         </div>
                         <div  class="input-field col right s10">
                             <div class="row">

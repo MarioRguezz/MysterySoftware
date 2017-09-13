@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MysterySoftware - Iniciar sesión</title>
+    <title>MysterySoftware - Home</title>
   <!--  <link rel="shortcut icon" type="image/png" href="{{ url('/img/icono.png') }}" />-->
     <link rel="stylesheet" href="../CSS/materialize/css/materialize.min.css">
     <link rel="stylesheet" href="../CSS/style.css">
